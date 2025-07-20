@@ -1,37 +1,30 @@
-# MoErgo Glove80 Custom Configuration for ZMK
+# MoErgo Glove80 - ZMK를 활용한 속기사 키보드(Korean)
 
-![MoErgo Logo](moergo_logo.png)
+![MoErgo 로고](moergo_logo.png)
 
-This repo is the official ZMK configuration of the MoErgo Glove80 wireless split contoured keyboard. Use it to develop your own keymap and easily build your own ZMK firmware to run on your Glove80.
+이 리포지토리는 MoErgo Glove80 무선 분할 컨투어 키보드로 개인 커스텀 layer 및 steno-korean layer를 사용할 수 있도록 만든 레포지토리 입니다.
 
-**NOTE: You can also customize the layout of your Glove80 keyboard with the Glove80 Layout Editor webapp. For most users Glove80 Layout Editor is the recommended and simpler option. More information is available at the official MoErgo Glove80 Support site (see resources below).**
+공식적인 기본 Glove80 ZMK Config 파일을 보고 싶으시다면 아래 레포지토리 가시면 됩니다.
 
-These steps will get you using your keymap on your keyboard in the fastest time possible. It uses the GitHub Actions feature to build your firmware online.
+[Glove80 ZMK 공식 기본 설정 레포지토리](https://github.com/moergo-sc/glove80-zmk-config)
 
-If you are looking to dig deeper into ZMK and develop new functionality, it is recommended to follow the steps of installing ZMK as found on the official ZMK documentation site (linked below).
 
-## Resources
-- The [official MoErgo Glove80 Support](https://moergo.com/glove80-support) web site. Glove80 documentation and other technical resources.
-- The [official MoErgo Discord Server](https://moergo.com/discord). Instant conversations with other Glove80 users.
 
-- The [official ZMK Documentation](https://zmk.dev/docs) web site. Find the answers to many of your questions about ZMK Firmware.
-- The [official ZMK Discord Server](https://discord.gg/8cfMkQksSB). Instant conversations with other ZMK developers and users. Great technical resource!
 
-- The [official Glove80 ZMK Distribution](https://github.com/moergo-sc/zmk). Repositiory for ZMK firmware customized for Glove80. 
- 
-## Instructions
-1. Log into, or sign up for, your personal GitHub account.
-2. Create your own repository using this repository as a template ([instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)) and check it out on your local computer.
-3. Edit the keymap file(s) to suit your needs
-4. Commit and push your changes to your personal repo. Upon pushing it, GitHub Actions will start building a new version of your firmware with the updated keymap.
 
-## Firmware Files
-To locate your firmware files and reflash your Glove80...
-1. log into GitHub and navigate to your personal config repository you just uploaded your keymap changes to.
-2. Click "Actions" in the main navigation, and in the left navigation click the "Build" link.
-3. Select the desired workflow run in the centre area of the page (based on date and time of the build you wish to use). You can also start a new build from this page by clicking the "Run workflow" button.
-4. After clicking the desired workflow run, you should be presented with a section at the bottom of the page called "Artifacts". This section contains the results of your build, in a file called "glove80.uf2"
-5. Download the glove80.uf2
-6. Flash the firmware to Glove80 according to the user documentation on the official Glove80 Glove80 Support website (linked above)
 
-Your keyboard is now ready to use.
+---
+***참고**: Glove80 레이아웃 에디터 웹앱을 사용하여 Glove80 키보드의 레이아웃을 커스터마이징할 수도 있습니다. 
+
+고급 옵션을 사용하지 않는다면 대부분의 사용자에게는 Glove80 레이아웃 편집기가 더 간편하고 권장되는 옵션이라고 합니다.
+자세한 내용은 공식 MoErgo Glove80 지원 사이트에서 확인할 수 있습니다(아래 자료 참조).
+
+ZMK에 대해 더 자세히 알아보고 새로운 기능을 개발하려면 공식 ZMK 문서 사이트(아래 링크)에 나와 있는 ZMK 설치 단계를 따르는 것이 좋습니다.
+
+## 리소스
+- 공식 모에르고 글로브80 지원](https://moergo.com/glove80-support) 웹 사이트. Glove80 문서 및 기타 기술 자료.
+- 공식 모에르고 디스코드 서버](https://moergo.com/discord). 다른 Glove80 사용자와의 즉각적인 대화.
+- 공식 ZMK 문서](https://zmk.dev/docs) 웹 사이트. ZMK 펌웨어에 대한 많은 질문에 대한 답을 찾을 수 있습니다.
+- 공식 ZMK 디스코드 서버](https://discord.gg/8cfMkQksSB). 다른 ZMK 개발자 및 사용자와 즉시 대화할 수 있습니다. 훌륭한 기술 리소스!
+- 공식 글로브80 ZMK 배포](https://github.com/moergo-sc/zmk). Glove80에 맞게 커스터마이징된 ZMK 펌웨어 저장소.
+
