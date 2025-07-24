@@ -12,7 +12,7 @@ if "%~1"=="" (
 )
 
 :: Build Docker image
-docker build -t "%IMAGE%" .
+docker build -t "%IMAGE%" -f firmware/docker/Dockerfile .
 
 :: Run Docker container
 docker run --rm -v "%cd%:/config" -e UID=0 -e GID=0 -e BRANCH="%BRANCH%" "%IMAGE%"
