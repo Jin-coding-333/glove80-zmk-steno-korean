@@ -400,9 +400,4 @@ macros {
         };
 
     };
-};};&kp W    &kp R   &kp Z                                                          &kp R     &kp S    &kp F    &kp Y    &kp Q   &trans
- &trans  &kp A    &kp F    &kp S    &kp G   &kp send_ML                                                    &kp T     &kp O    &kp A    &kp E    &kp W   &trans
- &trans  &trans  &trans    &kp H    &kp K   &kp N        &trans  &trans  &trans  &trans  &trans  &trans    &kp M     &kp J    &kp L   &trans   &trans   &trans
- &trans  &trans  &trans   &trans   &trans                &trans  &trans  &trans  &trans  &trans  &trans           &trans   &trans   &trans   &trans   &trans
-&kp N        &trans  &trans  &trans  &trans  &trans  &trans    &kp M     &kp J    &kp L   &trans   &trans   &trans
- &trans  &trans  &trans   &trans   &trans                &trans  &trans  &trans  &trans  &trans  &trans           &trans   &trans   &trans   &trans   &trans
+};
