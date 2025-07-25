@@ -50,7 +50,6 @@
         // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
         lower: lower {
             compatible = "zmk,behavior-tap-dance";
-            label = "LAYER_TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo LAYER_Lower>, <&to LAYER_Lower>;
@@ -61,7 +60,6 @@
 / {
     macros {
         rgb_ug_status_macro: rgb_ug_status_macro {
-            label = "RGB_UG_STATUS";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -76,28 +74,24 @@
     behaviors {
         bt_0: bt_0 {
             compatible = "zmk,behavior-tap-dance";
-            label = "BT_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&bt_select_0>, <&bt BT_DISC 0>;
         };
         bt_1: bt_1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "BT_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&bt_select_1>, <&bt BT_DISC 1>;
         };
         bt_2: bt_2 {
             compatible = "zmk,behavior-tap-dance";
-            label = "BT_2";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&bt_select_2>, <&bt BT_DISC 2>;
         };
         bt_3: bt_3 {
             compatible = "zmk,behavior-tap-dance";
-            label = "BT_3";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&bt_select_3>, <&bt BT_DISC 3>;
@@ -105,7 +99,6 @@
     };
     macros {
         bt_select_0: bt_select_0 {
-            label = "BT_SELECT_0";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -113,7 +106,6 @@
                   <&bt BT_SEL 0>;
         };
         bt_select_1: bt_select_1 {
-            label = "BT_SELECT_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -121,8 +113,7 @@
                   <&bt BT_SEL 1>;
         };
         bt_select_2: bt_select_2 {
-            label = "BT_SELECT_2";
-            compatible = "zmk,behavior-macro";
+                compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&out OUT_BLE>,
@@ -266,10 +257,7 @@
 #define POS_RH_C6R1 9
 #define POS_RH_C6R2 21
 #define POS_RH_C6R3 33
-#define POS_RH_C6R4 45
-#define POS_RH_C6R5 63
-#define POS_RH_C6R6 79
-
+#define POS_RH_            bindings = <&kp M &kp L>;
 /* Custom Defined Behaviors */
 / {
 
@@ -278,6 +266,11 @@
 /* Automatically generated macro definitions */
 / {
     macros {
+        se        send_ML: send_ML {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp M &kp L>;
+        };
 
     };
 };
@@ -299,13 +292,13 @@
 
 
         layer_Base {
-            bindings = <
-   &kp ESC    &kp F2  &kp F11   &kp F12     &kp F5                                                                                             &kp F6       &kp F7     &kp F8     &kp F9  &kp EQUAL
+            bindings = <   &kp ESC    &kp F2  &kp F11   &kp F12     &kp F5                                                                                             &kp F6       &kp F7     &kp F8     &kp F9  &kp EQUAL
  &kp GRAVE    &kp N1   &kp N2    &kp N3     &kp N4  &kp N5                                                                              &kp N6  &kp N7      &kp N8     &kp N9     &kp N0  &kp MINUS
      &none     &kp Q    &kp W     &kp E      &kp R   &kp T                                                                              &kp Y   &kp U        &kp I      &kp O      &kp P   &kp BSLH
    &kp TAB     &kp A    &kp S     &kp D      &kp F   &kp G                                                                              &kp H   &kp J        &kp K      &kp L   &kp SEMI    &kp SQT
  &kp LCTRL     &kp Z    &kp X     &kp C      &kp V   &kp B  &kp LSHFT  &kp BSPC  &magic LAYER_Magic 0  &kp LGUI  &kp LCTRL  &kp LSHFT   &kp N   &kp M    &kp COMMA    &kp DOT   &kp FSLH  &kp LANG1
     &lower  &kp HOME  &kp END  &kp LEFT  &kp RIGHT          &kp SPACE   &kp RET              &kp LALT  &kp LALT    &kp DEL   &kp BSPC           &kp UP    &kp DOWN   &kp LBKT   &kp RBKT  &kp LANG1
+
             >;
         };
 
@@ -332,13 +325,13 @@
         };
 
         layer_Steno_Ko {
-            bindings = <
- &trans  &trans  &trans   &trans   &trans                                                                    &trans   &trans   &trans   &trans   &trans
- &trans  &kp C    &kp X    &kp Z    &kp Q   &kp V                                                   &kp R     &kp G    &kp X    &kp C    &kp V   &trans
- &trans  &kp T    &kp E    &kp W    &kp R   &kp Z                                                   &kp R     &kp S    &kp F    &kp Y    &kp Q   &trans
- &trans  &kp A    &kp F    &kp S    &kp G   &kp M                                                   &kp T     &kp O    &kp A    &kp E    &kp W   &trans
- &trans  &trans  &trans    &kp H    &kp K   &kp N   &trans  &trans  &trans  &trans  &trans  &trans  &kp M     &kp J    &kp L   &trans   &trans   &trans
- &trans  &trans  &trans   &trans   &trans           &trans  &trans  &trans  &trans  &trans  &trans           &trans   &trans   &trans   &trans   &trans
+            bindings = < &trans  &trans  &trans   &trans   &trans                                                                          &trans   &trans   &trans   &trans   &trans
+ &trans  &kp C    &kp X    &kp Z    &kp Q   &kp V                                                          &kp R    &kp G    &kp X    &kp C    &kp V   &trans
+ &trans  &kp T    &kp E    &kp W    &kp R   &kp Z                                                          &kp R    &kp S    &kp F    &kp Y    &kp Q   &tr &trans  &kp A    &kp F    &kp S    &kp G   &send_ML                                                       &kp T    &kp O    &kp A    &kp E    &kp W   &trans
+ans
+ &trans  &trans  &trans    &kp H    &kp K   &kp N        &trans  &trans  &trans  &trans  &trans  &trans    &kp M    &kp J    &kp L   &trans   &trans   &trans
+ &trans  &trans  &trans   &trans   &trans                &trans  &trans  &trans  &trans  &trans  &trans            &trans   &trans   &trans   &trans   &trans
+
             >;
         };
 
