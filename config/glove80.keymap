@@ -29,6 +29,7 @@
 #define LAYER_Lower 1
 #define LAYER_Magic 2
 #define LAYER_Factory 3
+#define LAYER_STENO_KO 4
 
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
 #ifndef LAYER_Lower
@@ -40,7 +41,7 @@
 
 /* Input Listeners */
 &mmv_input_listener {
-    input-processors = <&zip_xy_scaler 2 1>;
+    /* input-processors = <&zip_xy_scaler 2 1>; */
 };
 
 /* System behavior and Macros */
@@ -53,6 +54,12 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo LAYER_Lower>, <&to LAYER_Lower>;
+        };
+        steno_ko: steno_ko {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo LAYER_STENO_KO>, <&to LAYER_STENO_KO>;
         };
     };
 };
@@ -113,14 +120,13 @@
                   <&bt BT_SEL 1>;
         };
         bt_select_2: bt_select_2 {
-                compatible = "zmk,behavior-macro";
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&out OUT_BLE>,
                   <&bt BT_SEL 2>;
         };
         bt_select_3: bt_select_3 {
-            label = "BT_SELECT_3";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -131,7 +137,6 @@
 #else
     macros {
         bt_0: bt_0 {
-            label = "BT_0";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -139,7 +144,6 @@
                   <&bt BT_SEL 0>;
         };
         bt_1: bt_1 {
-            label = "BT_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -147,7 +151,6 @@
                   <&bt BT_SEL 1>;
         };
         bt_2: bt_2 {
-            label = "BT_2";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -155,7 +158,6 @@
                   <&bt BT_SEL 2>;
         };
         bt_3: bt_3 {
-            label = "BT_3";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -170,7 +172,6 @@
     behaviors {
         magic: magic {
             compatible = "zmk,behavior-hold-tap";
-            label = "MAGIC_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
@@ -257,7 +258,10 @@
 #define POS_RH_C6R1 9
 #define POS_RH_C6R2 21
 #define POS_RH_C6R3 33
-#define POS_RH_            bindings = <&kp M &kp L>;
+#define POS_RH_C6R4 45
+#define POS_RH_C6R5 63
+#define POS_RH_C6R6 79
+
 /* Custom Defined Behaviors */
 / {
 
@@ -266,12 +270,11 @@
 /* Automatically generated macro definitions */
 / {
     macros {
-        se        send_ML: send_ML {
+        send_ML: send_ML {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp M &kp L>;
+            bindings = <&kp M &kp L>;
         };
-
     };
 };
 
@@ -292,13 +295,13 @@
 
 
         layer_Base {
-            bindings = <   &kp ESC    &kp F2  &kp F11   &kp F12     &kp F5                                                                                             &kp F6       &kp F7     &kp F8     &kp F9  &kp EQUAL
+            bindings = <
+   &kp ESC    &kp F2  &kp F11   &kp F12     &kp F5                                                                                             &kp F6       &kp F7     &kp F8     &kp F9  &kp EQUAL
  &kp GRAVE    &kp N1   &kp N2    &kp N3     &kp N4  &kp N5                                                                              &kp N6  &kp N7      &kp N8     &kp N9     &kp N0  &kp MINUS
      &none     &kp Q    &kp W     &kp E      &kp R   &kp T                                                                              &kp Y   &kp U        &kp I      &kp O      &kp P   &kp BSLH
    &kp TAB     &kp A    &kp S     &kp D      &kp F   &kp G                                                                              &kp H   &kp J        &kp K      &kp L   &kp SEMI    &kp SQT
  &kp LCTRL     &kp Z    &kp X     &kp C      &kp V   &kp B  &kp LSHFT  &kp BSPC  &magic LAYER_Magic 0  &kp LGUI  &kp LCTRL  &kp LSHFT   &kp N   &kp M    &kp COMMA    &kp DOT   &kp FSLH  &kp LANG1
     &lower  &kp HOME  &kp END  &kp LEFT  &kp RIGHT          &kp SPACE   &kp RET              &kp LALT  &kp LALT    &kp DEL   &kp BSPC           &kp UP    &kp DOWN   &kp LBKT   &kp RBKT  &kp LANG1
-
             >;
         };
 
@@ -307,7 +310,7 @@
  &kp C_BRI_DN  &kp C_BRI_UP      &kp C_PREV      &kp C_NEXT           &trans                                                                                                     &kp C_MUTE    &kp C_VOL_DN     &kp C_VOL_UP            &kt B  &kp PAUSE_BREAK
        &trans         &none           &none           &none            &none   &kp HOME                                                                &kp LEFT_PARENTHESIS      &kp KP_NUM    &kp KP_EQUAL     &kp KP_SLASH  &kp KP_MULTIPLY  &kp PRINTSCREEN
        &trans         &none           &none    &kp UP_ARROW            &none    &kp END                                                                            &mkp MB5       &mkp LCLK    &mmv MOVE_UP        &mkp RCLK        &kp PSCRN   &kp SCROLLLOCK
-       &trans         &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_UP                                                                            &mkp MB4  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT      &kp KP_PLUS            &none
+       &trans         &steno_ko  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_UP                                                                            &mkp MB4  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT      &kp KP_PLUS            &none
        &trans         &kp Z           &kp X       &kp LC(C)        &kp LC(V)  &kp PG_DN  &trans  &trans  &magic LAYER_Magic 0  &trans  &trans  &trans         &kp LC(LA(M))    &msc SCRL_UP          &kp UP   &msc SCRL_DOWN   &msc SCRL_LEFT        &kp PG_UP
         &to 0      &kp CAPS         &kp INS       &kp LC(Z)        &kp LC(Y)             &trans  &trans                &trans  &trans  &trans  &trans                              &kp LEFT        &kp DOWN        &kp RIGHT  &msc SCRL_RIGHT        &kp PG_DN
             >;
@@ -320,20 +323,23 @@
        &none  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                         &none   &none   &none   &none   &none           &none
  &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none   &none   &none   &none   &none     &bootloader
   &sys_reset            &none            &none            &none            &none            &none   &bt_2   &bt_3         &none   &none   &none   &none   &none   &none   &none   &none   &none      &sys_reset
-       &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none           &to 3
+       &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none           &to LAYER_Factory
             >;
         };
 
         layer_Steno_Ko {
-            bindings = < &trans  &trans  &trans   &trans   &trans                                                                          &trans   &trans   &trans   &trans   &trans
+            bindings = <
+ &trans  &trans  &trans   &trans   &trans                                                                          &trans   &trans   &trans   &trans   &trans
  &trans  &kp C    &kp X    &kp Z    &kp Q   &kp V                                                          &kp R    &kp G    &kp X    &kp C    &kp V   &trans
- &trans  &kp T    &kp E    &kp W    &kp R   &kp Z                                                          &kp R    &kp S    &kp F    &kp Y    &kp Q   &tr &trans  &kp A    &kp F    &kp S    &kp G   &send_ML                                                       &kp T    &kp O    &kp A    &kp E    &kp W   &trans
-ans
+ &trans  &kp T    &kp E    &kp W    &kp R   &kp Z                                                          &kp R    &kp S    &kp F    &kp Y    &kp Q   &trans
+ &trans  &kp A    &kp F    &kp S    &kp G   &send_ML                                                       &kp T    &kp O    &kp A    &kp E    &kp W   &trans
  &trans  &trans  &trans    &kp H    &kp K   &kp N        &trans  &trans  &trans  &trans  &trans  &trans    &kp M    &kp J    &kp L   &trans   &trans   &trans
  &trans  &trans  &trans   &trans   &trans                &trans  &trans  &trans  &trans  &trans  &trans            &trans   &trans   &trans   &trans   &trans
-
             >;
         };
 
     };
-};
+};                                                      &kp R     &kp S    &kp F    &kp Y    &kp Q   &trans
+ &trans  &kp A    &kp F    &kp S    &kp G   &kp send_ML                                                    &kp T     &kp O    &kp A    &kp E    &kp W   &trans
+ &trans  &trans  &trans    &kp H    &kp K   &kp N        &trans  &trans  &trans  &trans  &trans  &trans    &kp M     &kp J    &kp L   &trans   &trans   &trans
+ &trans  &trans  &trans   &trans   &trans                &trans  &trans  &trans  &trans  &trans  &trans           &trans   &trans   &trans   &trans   &trans
