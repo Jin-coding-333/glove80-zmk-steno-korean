@@ -372,7 +372,7 @@ macros {
  &trans   &steno 6   &steno 7   &steno 8   &steno 9         &steno 10                                                  &steno 17   &steno 18   &steno 19   &steno 20   &steno 21   &none
  &trans   &steno 0   &steno 1   &steno 2   &steno 3         &steno 4                                                         &steno 13   &steno 14   &steno 15   &steno 16   &steno 17   &none
  &trans   &steno 5   &steno 6   &steno 7   &steno 8         &steno 9                                                  &steno 18   &steno 19   &steno 20   &steno 21   &steno 22  &trans
- &trans   &none   &none   &steno 10   &steno 11  &steno 12  &trans  &trans  &trans  &trans  &trans  &trans         &steno 23   &steno 24   &steno 25   &none   &none  &trans
+ &trans   &none   &none   &steno 10   &steno 11  &steno 12  &trans  &trans  &trans  &trans  &trans  &trans         &steno 22   &steno 23   &steno 22   &none   &none  &trans
   &to 0  &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans  &trans
             >;
         };
