@@ -58,7 +58,7 @@ docker build -t glove80-zmk .
 
 ---
 
-## 리소스
+##### 리소스
 - [공식 모에르고 Glove80 지원](https://moergo.com/glove80-support) 웹 사이트. Glove80 문서 및 기타 기술 자료.
 - [공식 모에르고 디스코드 서버](https://moergo.com/discord). 다른 Glove80 사용자와의 즉각적인 대화.
 - [공식 ZMK 문서](https://zmk.dev/docs) 웹 사이트. ZMK 펌웨어에 대한 많은 질문에 대한 답을 찾을 수 있습니다.
