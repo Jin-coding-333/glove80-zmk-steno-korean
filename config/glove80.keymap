@@ -322,8 +322,8 @@
                 &none   &none   &none   &none   &none   &none                                                               &none   &none   &none   &none   &none  &trans
                &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                                              &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
                &trans   &kp Q   &kp W   &kp E   &kp R   &kp T                                                               &kp Y   &kp U   &kp I   &kp O   &kp P  &trans
-               &trans   &kp A   &kp S   &kp D   &kp F   &kp G   &kp X  &kp SPACE         &to 0    &none  &kp BSPC   &kp B   &kp H   &kp J   &kp K   &kp L   &kp M  &trans
- &magic LAYER_Magic 0  &trans  &trans  &trans  &trans           &kp Z      &kp C  &kp KP_ENTER  &kp DEL     &kp V   &kp N          &trans  &trans  &trans  &trans  &trans
+               &trans   &kp A   &kp S   &kp D   &kp F   &kp G   &kp SPACE  &kp KP_ENTER  &to 0    &none  &kp DEL   &kp BSPC  &kp H   &kp J   &kp K   &kp L   &kp M  &trans
+ &magic LAYER_Magic 0  &trans  &trans  &trans  &trans           &kp Z      &kp x         &kp c    &kp V     &kp B   &kp N          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
