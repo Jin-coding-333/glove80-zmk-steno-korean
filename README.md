@@ -7,7 +7,7 @@
 Steno_Korean 레이어는 `Layer 2`에 위치해 있습니다.
 기본 레이어들에 Steno_Korean 레이어만 추가하였습니다.(해당 레이어(`Layer 2`)는 `lower` 레이어를 통해 바꿀 수 있습니다.) 
 
-**ZMK 펌웨어**에 대해 잘 아시는 고급 사용자는 직접 `clone`을 받으셔서 편집하시면 되지만, **Glove80** 키보드 특성상 **MoErgo**에서 제공하는 [웹 편집기](https://my.glove80.com/#/layout/user/a14b5c8e-8335-4506-b7b1-add15baa4d4f)에서 편집하시는 것을 추천합니다.
+**ZMK 펌웨어**에 대해 잘 아시는 고급 사용자는 직접 `clone`을 받으셔서 편집하시면 되지만, **Glove80** 키보드 특성상 **MoErgo**에서 제공하는 [웹 편집기](https://my.glove80.com/#/layout/user/ec112e59-be21-43b6-bccd-4fe966b04ab1)에서 편집하시는 것을 추천합니다.
 (**MoErgo**에서도 권장하는 사항이고, *스테노 키보드*를 만드는데 충분한 기능을 제공하고 있으며, 보다 빠릅니다.)
 
 ## 빌드 방법
@@ -29,9 +29,9 @@ docker build -t glove80-zmk .
 
 4. 빌드가 완료되면 프로젝트 루트 경로에 `glove80.uf2` 파일이 생성됩니다. `.uf2` 파일을 **Glove80** 키보드에 복사하여 적용하시면 됩니다.
 
-빌드 되는데 시간이 오래 걸리기 때문에 **MoErgo**에서 제공하는 [웹 편집기](https://my.glove80.com/#/layout/user/a14b5c8e-8335-4506-b7b1-add15baa4d4f)를 사용하는 것을 추천합니다.
+빌드 되는데 시간이 오래 걸리기 때문에 **MoErgo**에서 제공하는 [웹 편집기](https://my.glove80.com/#/layout/user/ec112e59-be21-43b6-bccd-4fe966b04ab1)를 사용하는 것을 추천합니다.
 
-[사이트](https://my.glove80.com/#/layout/user/a14b5c8e-8335-4506-b7b1-add15baa4d4f)에 들어가시면 원 클릭으로 빠르게 빌드할 수 있습니다.
+위 사이트에 들어가시면 원 클릭으로 빠르게 빌드할 수 있습니다.
 
 ## Plover 설치 및 사용
 [Plover](https://www.openstenoproject.org/plover/)은 무료 오픈소스 속기 엔진입니다.
