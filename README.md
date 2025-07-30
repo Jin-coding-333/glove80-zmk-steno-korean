@@ -2,13 +2,13 @@
 
 ![MoErgo 로고](moergo_logo.png)
 
-이 저장소는 **MoErgo Glove80** 무선 분할 컨투어 키보드를 기반으로, 한국어 *스테노(Steno) 키보드([CAS방식](https://plover.wiki/index.php/Steno_layouts_and_supported_languages#Korean_CAS))*, 즉 속기사 키보드 레이어를 추가한 레포지토리입니다.
+이 저장소는 [**MoErgo Glove80** 무선 분할 컨투어 키보드](https://www.moergo.com/)를 기반으로, 한국어 *스테노(Steno) 키보드([CAS방식](https://plover.wiki/index.php/Steno_layouts_and_supported_languages#Korean_CAS))*, 즉 속기사 키보드 레이어를 추가한 레포지토리입니다.
 
 Steno_Korean 레이어는 `Layer 2`에 위치해 있습니다.
-기본 레이어들에 Steno_Korean 레이어만 추가하였습니다.(해당 레이어(`Layer 2`)는 `lower` 레이어를 통해 바꿀 수 있습니다.) 
+기본 레이어들에 Steno_Korean 레이어만 추가하였습니다.{해당 레이어(`Layer 2`)는 `lower` 레이어를 통해 바꿀 수 있습니다.}
 
 **ZMK 펌웨어**에 대해 잘 아시는 고급 사용자는 직접 `clone`을 받으셔서 편집하시면 되지만, **Glove80** 키보드 특성상 **MoErgo**에서 제공하는 [웹 편집기](https://my.glove80.com/#/layout/user/ec112e59-be21-43b6-bccd-4fe966b04ab1)에서 편집하시는 것을 추천합니다.
-(**MoErgo**에서도 권장하는 사항이고, *스테노 키보드*를 만드는데 충분한 기능을 제공하고 있으며, 보다 빠릅니다.)
+([**MoErgo**에서도 권장하는 사항](https://github.com/moergo-sc/glove80-zmk-config)이고, *스테노 키보드*를 만드는데 충분한 기능을 제공하고 있으며, 보다 빠릅니다.)
 
 ## 빌드 방법
 추천하지는 않지만 **ZMK 펌웨어**를 직접 빌드하시고 싶으시다면 아래의 방법을 참고하시면 됩니다.
@@ -52,9 +52,13 @@ docker build -t glove80-zmk .
 [**easy_korean_steno**](https://github.com/petercpark/easy_korean_steno) 플러그인은 한 글자를 한 번에 만드는데 초점을 둔 걸로 알고 있습니다.
 [데모영상](https://www.youtube.com/watch?v=MfRnoFWqE-E)에서도 볼 수 있듯이 한 단어, 한 문장 단위가 아닌 한 글자 씩 만들기 때문에 스피드 면에서 조금 떨어질 수밖에 없을 것 같습니다.
 
-플러그인이 모두 설치 됐다면 이제 연습을 하시면 됩니다.
-연습을 할 수 있는 사이트는 아래 남겨 놓겠습니다.
-([한국속기원(연습 페이지)](https://www.koreasteno.com/cas/), 일부 유료화가 있기는 하지만 연습할 수 있는 프로그램이 있다는 점과 자료가 비교적 많다는 점에서 CAS(plover_korean) 방식이 현재까지는 가장 좋은 대안이지 않을까 생각됩니다.)
+##### 마무리
+플러그인이 모두 설치 됐다면 기능을 **Plover** 앱에서 활성화하시고 이제 연습을 하시면 됩니다.
+연습할 수 있는 사이트는 아래 남겨 놓겠습니다.
+- ([한국속기원(연습 페이지)](https://www.koreasteno.com/cas/), 타자 연습 사이트
+- [plove_korean CAS 방식 설명 문서](https://github.com/nsmarkop/plover_korean/tree/master/plover_korean/system/cas)
+
+일부 유료화가 있기는 하지만 연습할 수 있는 프로그램이 있다는 점과 자료가 비교적 많다는 점에서 CAS(plover_korean) 방식이 현재까지는 가장 좋은 대안이지 않을까 생각됩니다.)
 
 ---
 
